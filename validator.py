@@ -10,4 +10,7 @@ def validate_user(username: str, password: str, email: str) -> dict:
     if len(username) < 3:
         errors.append("Username deve ter no mínimo 3 caracteres.")
 
+    if len(password) < 6:
+        errors.append("Senha deve ter no mínimo 6 caracteres.")
+        
     return {"valid": len(errors) == 0, "errors": errors}
