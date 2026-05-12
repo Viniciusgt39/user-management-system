@@ -12,5 +12,8 @@ def validate_user(username: str, password: str, email: str) -> dict:
 
     if len(password) < 6:
         errors.append("Senha deve ter no mínimo 6 caracteres.")
+
+    if "@" not in email or "." not in email:
+        errors.append("Email inválido.")
         
     return {"valid": len(errors) == 0, "errors": errors}
