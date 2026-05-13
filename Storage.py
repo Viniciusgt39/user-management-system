@@ -25,3 +25,8 @@ def save_user(username: str, email: str) -> bool:
     
     print(f"Usuário '{username}' salvo com sucesso.")
     return True
+
+def get_user(username: str) -> dict | None:
+    """Busca usuário pelo username."""
+    users = _load_users()
+    return next((u for u in users if u["username"] == username), None)
