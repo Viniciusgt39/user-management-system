@@ -1,5 +1,5 @@
 # validator.py
-
+# Melhorando a validação com REGEX (Fictício, não implementado aqui)
 def validate_user(username: str, password: str, email: str) -> dict:
     """
     Valida os dados do usuário antes do registro.
